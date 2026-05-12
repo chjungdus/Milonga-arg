@@ -1197,15 +1197,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section-line { margin-bottom: 36px; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .hero-rule-line { display: none; }
+  .hero-top { display: block; text-align: center; }
   .hero-eyebrow {
+    display: block;
     white-space: normal;
-    text-align: center;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     font-size: 0.58rem;
+    line-height: 1.7;
   }
-  .hero-top { justify-content: center; }
   .hero-social { display: none; }
   .hero-scroll-hint { display: none; }
   .hero-bottom { justify-content: center; }
