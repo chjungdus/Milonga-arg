@@ -266,7 +266,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../img/foodtruck.jpg');
+  background-image: url('../img/foodtruck/ea262132-1000150678.jpg');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
