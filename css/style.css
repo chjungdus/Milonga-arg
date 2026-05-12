@@ -263,19 +263,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-align: center;
   overflow: hidden;
 }
-.hero-bg {
+.hero-video {
   position: absolute;
   inset: 0;
-  background-image: url('../img/foodtruck/ea262132-1000150678.jpg');
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.05);
-  transition: transform 8s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
-#hero:hover .hero-bg { transform: scale(1); }
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     rgba(10,22,40,0.72) 0%,
