@@ -300,10 +300,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero-eyebrow {
   font-size: 0.62rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(212,160,23,0.6);
-  white-space: nowrap;
+  text-align: center;
 }
 .hero-center {
   text-align: center;
