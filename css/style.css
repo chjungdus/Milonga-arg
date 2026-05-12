@@ -310,7 +310,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(5.5rem, 18vw, 13rem);
+  font-size: clamp(3.5rem, 15vw, 13rem);
   color: var(--gold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -868,8 +868,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 12px;
   width: 100%;
   padding: 16px 24px;
-  background: var(--green-wa);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--navy);
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -878,7 +878,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: background var(--transition), transform var(--transition);
 }
 .whatsapp-cta:hover {
-  background: #1ebe57;
+  background: var(--gold-light);
   transform: translateY(-2px);
 }
 .whatsapp-cta svg { flex-shrink: 0; }
@@ -988,7 +988,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: color var(--transition);
 }
 .footer-contact-item:hover { color: var(--gold); }
-.footer-contact-icon { font-size: 1rem; flex-shrink: 0; }
+.footer-contact-item::before {
+  content: '—';
+  color: var(--gold);
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  opacity: 0.55;
+}
 
 .footer-bottom {
   border-top: 1px solid rgba(212,160,23,0.1);
@@ -1047,8 +1053,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   #burger { display: none; }
   .nav-links { display: flex; }
 
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-  .gallery-item { aspect-ratio: 1/1; }
+  .gallery-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 520px;
+  }
+  .gallery-item { aspect-ratio: auto; }
+  .gallery-item:first-child { grid-row: 1 / 3; }
 
   .kontakt-grid { grid-template-columns: 1fr 1fr; }
 
@@ -1074,8 +1085,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section-line { margin-bottom: 36px; }
 }
 
+@media (max-width: 480px) {
+  .hero-social { display: none; }
+  .hero-scroll-hint { display: none; }
+  .hero-bottom { justify-content: center; }
+  .hero-actions { width: 100%; justify-content: center; }
+  .hero-inner { padding: calc(var(--nav-h) + 16px) 24px 40px; }
+}
+
 @media (max-width: 375px) {
-  .hero-title { letter-spacing: 0.1em; }
-  .hero-buttons { flex-direction: column; align-items: stretch; }
-  .hero-buttons .btn { text-align: center; }
+  .hero-title { letter-spacing: 0.08em; }
 }
