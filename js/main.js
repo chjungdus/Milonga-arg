@@ -34,17 +34,20 @@ window.addEventListener('scroll', () => {
 /* ── Intersection Observer: Fade-in ── */
 const fadeEls = document.querySelectorAll('.fade-in')
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible')
-      }, i * 80)
+      entry.target.classList.add('visible')
       observer.unobserve(entry.target)
     }
   })
-}, { threshold: 0.12 })
+}, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' })
 
 fadeEls.forEach(el => observer.observe(el))
+
+/* Fallback: alles sichtbar nach 600ms, falls Observer nicht feuert */
+setTimeout(() => {
+  fadeEls.forEach(el => el.classList.add('visible'))
+}, 600)
 
 /* ── Smooth Scroll for all anchor links ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
