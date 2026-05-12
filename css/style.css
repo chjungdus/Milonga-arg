@@ -263,26 +263,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-align: center;
   overflow: hidden;
 }
-.hero-video {
+.hero-bg {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-  /* Fallback: wenn kein Video geladen wird, zeigt das poster-Attribut das Bild */
+  background-image: url('../img/foodtruck/ea262132-1000150678.jpg');
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 8s ease;
 }
-
-/* Kein Video auf Geräten die prefers-reduced-motion bevorzugen */
-@media (prefers-reduced-motion: reduce) {
-  .hero-video { display: none; }
-  #hero { background-image: url('../img/foodtruck/ea262132-1000150678.jpg'); background-size: cover; background-position: center; }
-}
+#hero:hover .hero-bg { transform: scale(1); }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
   background: linear-gradient(
     to bottom,
     rgba(10,22,40,0.72) 0%,
@@ -290,8 +283,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     rgba(10,22,40,0.82) 100%
   );
 }
-.hero-content { z-index: 2; }
-.hero-strip   { z-index: 3; }
 .hero-content {
   position: relative;
   z-index: 2;
