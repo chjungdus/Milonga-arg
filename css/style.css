@@ -310,11 +310,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 15vw, 13rem);
+  font-size: clamp(2.2rem, 12vw, 13rem);
   color: var(--gold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 0.9;
+  white-space: nowrap;
   text-shadow: 0 0 120px rgba(212,160,23,0.18);
 }
 .hero-tagline {
@@ -868,8 +869,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 12px;
   width: 100%;
   padding: 16px 24px;
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--green-wa);
+  color: var(--white);
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -878,7 +879,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: background var(--transition), transform var(--transition);
 }
 .whatsapp-cta:hover {
-  background: var(--gold-light);
+  background: #1ebe57;
+  transform: translateY(-2px);
+}
+.order-cta-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.order-cta-btn--wa {
+  background: var(--green-wa);
+  color: var(--white);
+}
+.order-cta-btn--wa:hover {
+  background: #1ebe57;
   transform: translateY(-2px);
 }
 .whatsapp-cta svg { flex-shrink: 0; }
@@ -1015,6 +1030,99 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: rgba(154,146,135,0.5);
 }
 
+/* ── Bestell-CTA ────────────────────────────────────────────────── */
+.order-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--navy-light);
+  border: 1px solid rgba(212,160,23,0.2);
+  border-left: 4px solid var(--gold);
+  padding: 32px 28px;
+  margin-top: 52px;
+}
+.order-cta-heading {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.order-cta-sub {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+.order-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 32px;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.order-cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* ── Über uns ───────────────────────────────────────────────────── */
+#ueber-uns {
+  background: var(--navy-mid);
+}
+.ueber-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+.ueber-lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: var(--gold);
+  font-style: italic;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+.ueber-text p {
+  font-size: 0.94rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.ueber-pullquote {
+  border-left: 3px solid var(--gold);
+  padding: 16px 0 16px 24px;
+  margin-top: 32px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: rgba(212,160,23,0.78);
+  font-style: italic;
+  line-height: 1.65;
+}
+.ueber-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-top: 3px solid var(--gold);
+  display: block;
+}
+.ueber-image-caption {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid rgba(212,160,23,0.12);
+}
+
 /* ── Menu Card personal touch ───────────────────────────────────── */
 .menu-card {
   position: relative;
@@ -1072,6 +1180,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     gap: 24px;
   }
   .insta-text { flex: 1; }
+}
+
+@media (min-width: 768px) {
+  .ueber-layout { grid-template-columns: 1fr 1fr; align-items: start; }
+  .order-cta { flex-direction: row; align-items: center; justify-content: space-between; }
 }
 
 @media (min-width: 900px) {
