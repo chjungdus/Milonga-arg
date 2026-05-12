@@ -19,8 +19,7 @@ document.querySelectorAll('#mobile-nav a').forEach(link => {
 })
 
 /* ── Navbar Scroll Effect ── */
-const navbar    = document.getElementById('navbar')
-const scrollTop = document.getElementById('scroll-top')
+const navbar = document.getElementById('navbar')
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
@@ -30,12 +29,7 @@ window.addEventListener('scroll', () => {
     navbar.style.background = 'rgba(10,22,40,0.85)'
     navbar.style.boxShadow  = 'none'
   }
-  scrollTop.classList.toggle('visible', window.scrollY > 400)
 }, { passive: true })
-
-scrollTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-})
 
 /* ── Intersection Observer: Fade-in ── */
 const fadeEls = document.querySelectorAll('.fade-in')
