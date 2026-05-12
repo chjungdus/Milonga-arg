@@ -310,12 +310,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 12vw, 13rem);
+  font-size: clamp(3rem, 14vw, 11rem);
   color: var(--gold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  line-height: 0.9;
-  white-space: nowrap;
+  line-height: 0.88;
   text-shadow: 0 0 120px rgba(212,160,23,0.18);
 }
 .hero-tagline {
