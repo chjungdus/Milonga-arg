@@ -300,7 +300,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero-eyebrow {
   font-size: 0.62rem;
-  letter-spacing: 0.38em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: rgba(212,160,23,0.6);
   white-space: nowrap;
@@ -1198,6 +1198,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 @media (max-width: 480px) {
+  .hero-rule-line { display: none; }
+  .hero-eyebrow {
+    white-space: normal;
+    text-align: center;
+    letter-spacing: 0.14em;
+    font-size: 0.58rem;
+  }
+  .hero-top { justify-content: center; }
   .hero-social { display: none; }
   .hero-scroll-hint { display: none; }
   .hero-bottom { justify-content: center; }
