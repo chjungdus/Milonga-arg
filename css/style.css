@@ -1197,12 +1197,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section-line { margin-bottom: 36px; }
 }
 
+/* On desktop, hide the forced line break in eyebrow */
+@media (min-width: 601px) {
+  .eyebrow-br { display: none; }
+}
+
 @media (max-width: 600px) {
   .hero-rule-line { display: none; }
   .hero-top { display: block; text-align: center; }
   .hero-eyebrow {
     display: block;
-    white-space: normal;
     letter-spacing: 0.12em;
     font-size: 0.58rem;
     line-height: 1.7;
