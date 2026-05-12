@@ -57,7 +57,22 @@
      HERO
 ════════════════════════════════════════════════════════════════════ -->
 <section id="hero" aria-label="Willkommen bei Milonga Food Truck">
-  <div class="hero-bg" role="img" aria-label="Milonga Food Truck in Düsseldorf"></div>
+
+  <!-- Video-Hintergrund (Fallback: foodtruck.jpg) -->
+  <video
+    id="hero-video"
+    class="hero-video"
+    autoplay
+    loop
+    muted
+    playsinline
+    poster="img/foodtruck/ea262132-1000150678.jpg"
+    aria-hidden="true">
+    <source src="video/hero.mp4"  type="video/mp4">
+    <source src="video/hero.mov"  type="video/quicktime">
+    <source src="video/hero.webm" type="video/webm">
+  </video>
+
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
