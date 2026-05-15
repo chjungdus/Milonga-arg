@@ -149,7 +149,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .nav-links {
   display: none;
-  gap: 32px;
+  gap: clamp(16px, 2.2vw, 32px);
   align-items: center;
 }
 .nav-links a {
@@ -1252,7 +1252,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .standort-btn { flex: 1; min-width: 180px; }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   #burger { display: none; }
   .nav-links { display: flex; }
 
