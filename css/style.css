@@ -511,6 +511,49 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 3px 9px;
 }
 
+.menu-card-extras {
+  font-size: 0.78rem;
+  color: rgba(212,160,23,0.65);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Empanadas list */
+.menu-group-note {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin: -12px 0 16px;
+}
+.empanada-list {
+  background: var(--navy-mid);
+  border: 1px solid rgba(212,160,23,0.15);
+}
+.empanada-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(212,160,23,0.08);
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: background var(--transition);
+}
+.empanada-item:last-child { border-bottom: none; }
+.empanada-item:hover { background: rgba(212,160,23,0.04); }
+.empanada-item-price {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.beilage-box {
+  background: var(--navy-mid);
+  border: 1px solid rgba(212,160,23,0.12);
+  padding: 8px 20px;
+}
+
 /* Empanadas special card */
 .empanada-card {
   background: var(--navy-mid);
