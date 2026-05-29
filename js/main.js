@@ -49,6 +49,16 @@ setTimeout(() => {
   fadeEls.forEach(el => el.classList.add('visible'))
 }, 600)
 
+/* ── Hero Video: force play on mobile ── */
+const heroVideo = document.querySelector('.hero-video')
+if (heroVideo) {
+  const tryPlay = () => { heroVideo.play().catch(() => {}) }
+  tryPlay()
+  document.addEventListener('touchstart', tryPlay, { once: true })
+  document.addEventListener('click', tryPlay, { once: true })
+  heroVideo.addEventListener('suspend', tryPlay)
+}
+
 /* ── Smooth Scroll for all anchor links ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
