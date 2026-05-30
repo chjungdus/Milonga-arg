@@ -834,6 +834,100 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .standort-info-card strong { color: var(--gold); }
 
+/* Sonne Banner */
+.sonne-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(212,160,23,0.07);
+  border: 1px solid rgba(212,160,23,0.25);
+  border-left: 4px solid var(--gold);
+  padding: 28px 24px;
+  margin-bottom: 40px;
+}
+.sonne-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+.sonne-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--white);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+.sonne-sub {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* Standort Cards */
+.standort-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.standort-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--navy-light);
+  border: 1px solid rgba(212,160,23,0.12);
+  padding: 22px 20px;
+  transition: border-color var(--transition);
+}
+.standort-card:hover { border-color: rgba(212,160,23,0.4); }
+.standort-card-nr {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: rgba(212,160,23,0.25);
+  font-weight: bold;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 36px;
+}
+.standort-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.standort-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.standort-card-link {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition);
+}
+.standort-card-link:hover { opacity: 0.7; }
+.standort-insta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.standort-insta p {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+@media (min-width: 768px) {
+  .standort-cards { grid-template-columns: repeat(3, 1fr); }
+  .standort-insta { flex-direction: row; align-items: center; }
+}
+
 /* ── Kontakt ────────────────────────────────────────────────────── */
 #kontakt {
   background: var(--navy);
