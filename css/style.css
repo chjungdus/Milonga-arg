@@ -593,6 +593,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-style: italic;
   margin: -12px 0 16px;
 }
+.empanada-photo {
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-top: 3px solid var(--gold);
+}
+.empanada-photo img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .empanada-list {
   background: var(--navy-mid);
   border: 1px solid rgba(212,160,23,0.15);
