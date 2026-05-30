@@ -398,64 +398,72 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   50% { transform: translateY(8px); opacity: 1; }
 }
 
-/* ── Standort-Strip ─────────────────────────────────────────────── */
-.standort-strip {
+/* ── Wo wir sind ────────────────────────────────────────────────── */
+.wo-wir-sind {
   background: var(--gold);
-  padding: 14px 20px;
+  padding: 52px 0;
 }
-.standort-strip-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+.wo-wir-sind-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
+  gap: 40px;
 }
-.standort-strip-sonne {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.wo-wir-sind-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(10,22,40,0.5);
+  margin-bottom: 12px;
 }
-.standort-strip-sun {
-  font-size: 1.1rem;
-  color: var(--navy);
-}
-.standort-strip-msg {
+.wo-wir-sind-headline {
   font-family: var(--font-serif);
-  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
-  font-weight: bold;
+  font-size: clamp(2rem, 6vw, 3.2rem);
   color: var(--navy);
+  line-height: 1.1;
   font-style: italic;
-  letter-spacing: 0.02em;
+  margin-bottom: 24px;
 }
-.standort-strip-orte {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.standort-strip-ort {
-  font-size: 0.75rem;
+.wo-wir-sind-link {
+  display: inline-block;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--navy);
-  opacity: 0.75;
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 2px;
   transition: opacity var(--transition);
 }
-.standort-strip-ort:hover { opacity: 1; }
-.standort-strip-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--navy);
-  opacity: 0.4;
-  flex-shrink: 0;
+.wo-wir-sind-link:hover { opacity: 0.6; }
+.wo-wir-sind-orte {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(10,22,40,0.2);
 }
-@media (min-width: 600px) {
-  .standort-strip-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+.wo-ort {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(10,22,40,0.2);
+}
+.wo-ort-nr {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: rgba(10,22,40,0.4);
+  min-width: 24px;
+}
+.wo-ort-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--navy);
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .wo-wir-sind-inner { flex-direction: row; align-items: center; gap: 80px; }
+  .wo-wir-sind-left { flex-shrink: 0; }
+  .wo-wir-sind-orte { flex: 1; }
 }
 
 /* ── Zitat-Banner ───────────────────────────────────────────────── */
